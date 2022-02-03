@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Patch>
+<Defs>
 
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Weapons Expanded - Laser</li>
-    </mods>
-
-    <match Class="PatchOperationSequence">
-    <operations>
-
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs</xpath>
-        <value>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>FF_LaserWrist</defName>
     <label>laser wrist</label>
@@ -119,10 +108,5 @@
     </appliedOnFixedBodyParts>
     <addsHediff>FF_LaserWrist</addsHediff>
   </RecipeDef>
-        </value>
-      </li>
-    </operations>
-    </match>
-  </Operation>
 
-</Patch>
+</Defs>

@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<Patch>
+<Defs>
 
-  <Operation Class="PatchOperationFindMod">
-    <mods>
-      <li>Vanilla Weapons Expanded - Non-Lethal</li>
-    </mods>
-
-    <match Class="PatchOperationSequence">
-    <operations>
-
-      <li Class="PatchOperationAdd">
-        <xpath>/Defs</xpath>
-        <value>
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>FF_TearGasArm</defName>
     <label>tear gas arm</label>
@@ -134,10 +123,5 @@
     </appliedOnFixedBodyParts>
     <addsHediff>FF_TearGasArm</addsHediff>
   </RecipeDef>
-        </value>
-      </li>
-    </operations>
-    </match>
-  </Operation>
 
-</Patch>
+</Defs>
