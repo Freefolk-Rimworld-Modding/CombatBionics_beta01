@@ -13,7 +13,7 @@
       <partEfficiency>1</partEfficiency>
     </addedPartProps>
     <comps>
-      <li Class="HediffCompProperties_VerbGiver">
+      <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
         <verbs>
           <li>
             <verbClass>MVCF.Verbs.Verb_Jump</verbClass>
@@ -30,12 +30,22 @@
               <canTargetPawns>false</canTargetPawns>
               <canTargetBuildings>false</canTargetBuildings>
             </targetParams>
-			<range>15.9</range>
+            <range>15.9</range>
           </li>
         </verbs>
+        <verbProps>
+          <li>
+            <label>jump</label>
+            <graphic>
+              <texPath>Things/Pawn/Humanlike/Apparel/JumpPack/JumpPack</texPath>
+              <graphicClass>Graphic_Single</graphicClass>
+            </graphic>
+            <brawlerCaresAbout>false</brawlerCaresAbout>
+          </li>
+        </verbProps>
       </li>
       <li Class="Reloading.HediffCompProperties_Reloadable">
-      <compClass>Reloading.HediffComp_Reloadable</compClass>
+        <compClass>Reloading.HediffComp_Reloadable</compClass>
         <AmmoFilter><thingDefs><li>Chemfuel</li></thingDefs></AmmoFilter>
         <ItemsPerShot>30</ItemsPerShot>
         <MaxShots>3</MaxShots>
