@@ -2,7 +2,7 @@
 <Defs>
 
   	<MVCF.ModDef>
-		<defName>MVCF_EnableAll</defName>
+		<defName>FF_MVCF_EnableAll</defName>
 		<label>Enable all features</label>
 		<description>All features will be enabled if this def is included.</description>
 		<Features>

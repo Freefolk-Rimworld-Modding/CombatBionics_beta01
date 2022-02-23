@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 
-<!-- Integers, nothing uses these as bases so they're gone after patching -->
   <Operation Class="PatchOperationFindMod">
     <mods>
       <li>Better Jump Pack (Continued)</li>
