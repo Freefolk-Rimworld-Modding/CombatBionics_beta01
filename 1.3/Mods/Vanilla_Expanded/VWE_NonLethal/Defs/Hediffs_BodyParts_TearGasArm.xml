@@ -14,18 +14,6 @@
       <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
     <comps>
-      <li Class="Reloading.HediffCompProperties_Reloadable">
-        <compClass>Reloading.HediffComp_Reloadable</compClass>
-        <MaxShots>5</MaxShots>
-        <AmmoFilter>
-          <thingDefs>
-             <li>Neutroamine</li>
-          </thingDefs>
-        </AmmoFilter>
-        <ItemsPerShot>5</ItemsPerShot>
-        <ReloadTimePerShot>0.5</ReloadTimePerShot>
-        <ReloadSound>ReloadRocket</ReloadSound>
-      </li>
       <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
         <verbs>
           <li>
