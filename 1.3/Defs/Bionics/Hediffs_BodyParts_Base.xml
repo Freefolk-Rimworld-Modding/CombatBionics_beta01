@@ -11,7 +11,7 @@
 		</Features>
 	</MVCF.ModDef>
 
-  <ThingDef Name="FF_BodyPartProstheticBase" ParentName="BodyPartBase" Abstract="True">
+  <ThingDef Name="FF_BodyPartProstheticCombatBase" ParentName="BodyPartBase" Abstract="True">
     <techLevel>Industrial</techLevel>
     <thingCategories>
       <li>BodyPartsProsthetic</li>
@@ -44,7 +44,7 @@
     </recipeMaker>
   </ThingDef>
 
-  <ThingDef Name="FF_BodyPartBionicBase" ParentName="BodyPartBase" Abstract="True">
+  <ThingDef Name="FF_BodyPartBionicCombatBase" ParentName="BodyPartBase" Abstract="True">
     <techLevel>Spacer</techLevel>
     <thingCategories>
       <li>BodyPartsBionic</li>
@@ -80,7 +80,7 @@
     </recipeMaker>
   </ThingDef>
 
-  <ThingDef Name="FF_BodyPartBionicBase" ParentName="BodyPartBase" Abstract="True">
+  <ThingDef Name="FF_BodyPartUltraCombatBase" ParentName="BodyPartBase" Abstract="True">
     <techLevel>Ultra</techLevel>
     <thingCategories>
       <li>BodyPartsUltra</li>

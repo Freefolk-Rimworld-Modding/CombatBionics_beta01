@@ -59,7 +59,7 @@
     </comps>
   </HediffDef>
 
-  <ThingDef ParentName="FF_BodyPartBionicBase">
+  <ThingDef ParentName="FF_BodyPartBionicCombatBase">
     <defName>FF_FlamerWristImplant</defName>
     <label>wrist flamer</label>
     <description>An advanced arm implant, with a built-in flamethrower.</description>

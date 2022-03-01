@@ -48,7 +48,7 @@
     </comps>
   </HediffDef>
 
-  <ThingDef ParentName="BodyPartBionicBase">
+  <ThingDef ParentName="FF_BodyPartBionicCombatBase">
     <defName>FF_TearGasArmImplant</defName>
     <label>tear gas launcher</label>
     <description>An advanced artifical arm, with a built-in tear gas canister launcher. While providing combat advantage, it is better than a biological arm in almost every way.</description>

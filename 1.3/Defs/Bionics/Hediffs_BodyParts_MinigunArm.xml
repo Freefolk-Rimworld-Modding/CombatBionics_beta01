@@ -58,7 +58,7 @@
     </comps>
   </HediffDef>
 
-  <ThingDef ParentName="FF_BodyPartProstheticBase">
+  <ThingDef ParentName="FF_BodyPartProstheticCombatBase">
     <defName>FF_MinigunArm</defName>
     <label>minigun arm</label>
     <description>A prosthetic arm, with a built-in retractable minigun. While providing combat advantage, it matches the performance of a prosthetic arm.</description>

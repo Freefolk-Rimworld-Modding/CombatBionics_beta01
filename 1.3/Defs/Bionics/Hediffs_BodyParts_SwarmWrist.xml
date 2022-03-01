@@ -56,7 +56,7 @@
     </comps>
   </HediffDef>
 
-  <ThingDef ParentName="FF_BodyPartBionicBase">
+  <ThingDef ParentName="FF_BodyPartBionicCombatBase">
     <defName>FF_SwarmWristImplant</defName>
     <label>whistling birds</label>
     <description>An advanced artifical arm implant, with a built-in single use concussion missile barrage. Whistling birds is a popular choice of implant among glitterworld warrior clans, as well as interplanetary bounty hunters; mostly because of its surprise factor and the wielder's ability to eliminate the threats quickly afterwards.</description>
