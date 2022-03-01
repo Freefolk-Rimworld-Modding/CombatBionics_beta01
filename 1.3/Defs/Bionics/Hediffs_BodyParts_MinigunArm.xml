@@ -10,20 +10,18 @@
     <spawnThingOnRemoved>FF_MinigunArm</spawnThingOnRemoved>
     <addedPartProps>
       <solid>true</solid>
-      <partEfficiency>1</partEfficiency>
+      <partEfficiency>0.5</partEfficiency>
     </addedPartProps>
     <comps>
       <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
         <tools>
           <li>
-            <label>fist</label>
+            <label>barrels</label>
             <capacities>
               <li>Blunt</li>
             </capacities>
-            <power>12</power>
-            <cooldownTime>2</cooldownTime>
-            <soundMeleeHit>MeleeHit_BionicPunch</soundMeleeHit>
-            <soundMeleeMiss>MeleeMiss_BionicPunch</soundMeleeMiss>
+            <power>11.7</power>
+            <cooldownTime>2.6</cooldownTime>
           </li>
         </tools>
         <verbs>
@@ -33,15 +31,17 @@
             <hasStandardCommand>True</hasStandardCommand>
             <defaultProjectile>Bullet_Minigun</defaultProjectile>
             <forcedMissRadius>2.9</forcedMissRadius>
-            <burstShotCount>12</burstShotCount>
+            <burstShotCount>25</burstShotCount>
             <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
             <warmupTime>2.5</warmupTime>
             <range>30.9</range>
             <soundCast>Shot_Minigun</soundCast>
             <soundCastTail>GunTail_Medium</soundCastTail>
-            <onlyManualCast>true</onlyManualCast>
+            <onlyManualCast>false</onlyManualCast>
             <targetParams>
-              <canTargetLocations>true</canTargetLocations>
+              <canTargetLocations>false</canTargetLocations>
+              <canTargetPawns>true</canTargetPawns>
+              <canTargetBuildings>true</canTargetBuildings>
             </targetParams>
             <muzzleFlashScale>9</muzzleFlashScale>
           </li>
@@ -58,16 +58,14 @@
     </comps>
   </HediffDef>
 
-  <ThingDef ParentName="FF_BodyPartBionicBase">
+  <ThingDef ParentName="FF_BodyPartProstheticBase">
     <defName>FF_MinigunArm</defName>
     <label>minigun arm</label>
-    <description>An advanced artifical arm, with a built-in retractable minigun. While providing combat advantage, it matches the performance of a biological arm.</description>
+    <description>A prosthetic arm, with a built-in retractable minigun. While providing combat advantage, it matches the performance of a prosthetic arm.</description>
     <descriptionHyperlinks><RecipeDef>FF_InstallMinigunArm</RecipeDef></descriptionHyperlinks>
     <costList>
-      <Plasteel>15</Plasteel>
-      <ComponentSpacer>4</ComponentSpacer>
       <Steel>100</Steel>
-      <ComponentIndustrial>12</ComponentIndustrial>
+      <ComponentIndustrial>10</ComponentIndustrial>
     </costList>
     <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
     <statBases>
@@ -75,7 +73,7 @@
     </statBases>
 	<recipeMaker>
       <researchPrerequisites>
-        <li>Bionics</li>
+        <li>Prosthetics</li>
         <li>MultibarrelWeapons</li>
       </researchPrerequisites>
 	</recipeMaker>
