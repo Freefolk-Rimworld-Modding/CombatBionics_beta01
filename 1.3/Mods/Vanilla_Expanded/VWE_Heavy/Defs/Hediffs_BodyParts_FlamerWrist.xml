@@ -195,7 +195,7 @@
     </comps>
   </HediffDef>
 
-  <ThingDef ParentName="FF_BodyPartBionicBase">
+  <ThingDef ParentName="FF_BodyPartBionicCombatBase">
     <defName>FF_FlamerWrist</defName>
     <label>flamer wrist</label>
     <description>An advanced artifical arm, with a built-in flamethrower. While providing combat advantage, it is better than a biological arm in almost every way.</description>

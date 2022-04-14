@@ -30,7 +30,7 @@
             <defaultProjectile>Bullet_FF_SwarmRocket</defaultProjectile>
             <forcedMissRadius>4.9</forcedMissRadius>
             <burstShotCount>8</burstShotCount>
-            <ticksBetweenBurstShots>18</ticksBetweenBurstShots>
+            <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
             <warmupTime>0.5</warmupTime>
             <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
             <range>21.9</range>
@@ -127,10 +127,10 @@
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
     </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
+    <thingClass>CombatBionics.Projectile_ExplosiveStun</thingClass>
     <projectile>
       <damageDef>FF_SwarmMissile</damageDef>
-      <!-- Use default damage from explosion def -->
+      <damageAmountBase>8</damageAmountBase>
       <explosionRadius>1.1</explosionRadius>
       <speed>80</speed>
     </projectile>
@@ -145,18 +145,18 @@
   <DamageDef>
     <defName>FF_SwarmMissile</defName>
     <label>swarm missile</label>
-    <workerClass>DamageWorker_AddInjury</workerClass>
+    <workerClass>DamageWorker_AddInjury</workerClass> <!-- Custom damage worker! -->
     <externalViolence>true</externalViolence>
     <isExplosive>true</isExplosive>
     <deathMessage>{0} has died in an explosion.</deathMessage>
     <hediff>Shredded</hediff>
     <hediffSolid>Crack</hediffSolid>
-    <harmAllLayersUntilOutside>true</harmAllLayersUntilOutside>
+    <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
     <impactSoundType>Blunt</impactSoundType>
-    <armorCategory>Sharp</armorCategory>
+    <armorCategory>Blunt</armorCategory>
     <minDamageToFragment>2</minDamageToFragment>
-    <defaultDamage>12</defaultDamage>
-    <defaultStoppingPower>2.5</defaultStoppingPower> <!-- Increased from 0.5, need testing -->
+    <defaultDamage>9</defaultDamage>
+    <defaultStoppingPower>0.5</defaultStoppingPower> <!-- Increased from 0.5, need testing -->
     <defaultArmorPenetration>0.10</defaultArmorPenetration>
     <buildingDamageFactor>4</buildingDamageFactor>
     <plantDamageFactor>4</plantDamageFactor>
@@ -243,7 +243,7 @@
     </comps>
   </HediffDef>
 
-  <ThingDef ParentName="FF_BodyPartBionicBase">
+  <ThingDef ParentName="FF_BodyPartBionicCombatBase">
     <defName>FF_SwarmWrist</defName>
     <label>swarm wrist</label>
     <description>An advanced artifical hand, with a built-in single use missile swarm. While providing combat advantage, it is better than a biological hand in almost every way.</description>

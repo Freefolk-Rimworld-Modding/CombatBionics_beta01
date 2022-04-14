@@ -54,7 +54,7 @@
     </comps>
   </HediffDef>
 
-  <ThingDef ParentName="FF_BodyPartBionicBase">
+  <ThingDef ParentName="FF_BodyPartBionicCombatBase">
     <defName>FF_JumpPackSpine</defName>
     <label>jump pack spine</label>
     <description>An advanced artifical spine, with a built-in jump pack system. While providing combat utility, it matches the performance of a biological spine.</description>

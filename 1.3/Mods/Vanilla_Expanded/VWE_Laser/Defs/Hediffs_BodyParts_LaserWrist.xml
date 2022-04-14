@@ -58,7 +58,7 @@
     </comps>
   </HediffDef>
 
-  <ThingDef ParentName="BodyPartBionicBase">
+  <ThingDef ParentName="FF_BodyPartBionicCombatBase">
     <defName>FF_LaserWrist</defName>
     <label>laser wrist</label>
     <description>An advanced artifical hand, with a built-in laser shooter. While providing combat advantage, it is better than a biological hand in almost every way.</description>
