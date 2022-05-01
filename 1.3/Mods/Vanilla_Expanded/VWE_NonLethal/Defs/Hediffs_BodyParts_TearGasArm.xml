@@ -8,24 +8,19 @@
     <description>An installed tear gas launcher.</description>
     <descriptionHyperlinks><ThingDef>FF_TearGasArmImplant</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>FF_TearGasArmImplant</spawnThingOnRemoved>
-    <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>1.15</partEfficiency>
-      <betterThanNatural>true</betterThanNatural>
-    </addedPartProps>
     <comps>
       <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
         <verbs>
           <li>
             <label>tear gas launcher</label>
-            <verbClass>Verb_Shoot</verbClass>
+            <verbClass>Verb_LaunchProjectileStatic</verbClass>
             <hasStandardCommand>True</hasStandardCommand>
             <defaultProjectile>VWENL_Projectile_TearGasGrenade</defaultProjectile>
             <forcedMissRadius>2.9</forcedMissRadius>
             <burstShotCount>1</burstShotCount>
             <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-            <warmupTime>3.5</warmupTime>
-            <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+            <warmupTime>1.5</warmupTime>
+            <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
             <range>19.9</range>
             <soundCast>VWENL_Shot_GrenadeLauncher</soundCast>
             <soundCastTail>GunTail_Medium</soundCastTail>
@@ -38,10 +33,28 @@
         </verbs>
         <verbProps>
           <li>
-            <label>tear gas launcher</label>
+            <label>tear gas arm</label>
             <draw>false</draw>
             <canBeToggled>true</canBeToggled>
             <canFireIndependently>false</canFireIndependently>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+                <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+                <cooldownTime>10</cooldownTime>
+              </li>
+              <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                <AmmoFilter>
+                  <thingDefs>
+                    <li>Neutroamine</li>
+                  </thingDefs>
+                </AmmoFilter>
+                <ItemsPerShot>5</ItemsPerShot>
+                <MaxShots>5</MaxShots>
+                <ReloadSound>Standard_Reload</ReloadSound>
+                <ReloadTimePerShot>1</ReloadTimePerShot>
+              </li>
+            </comps>
           </li>
         </verbProps>
       </li>
@@ -116,7 +129,7 @@
 
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>FF_TearGasArm</defName>
-    <label>tear gas arm</label>
+    <label>tear gas arm (legacy)</label>
     <labelNoun>a tear gas arm</labelNoun>
     <description>An installed tear gas arm.</description>
     <descriptionHyperlinks><ThingDef>FF_TearGasArm</ThingDef></descriptionHyperlinks>
@@ -149,8 +162,8 @@
             <forcedMissRadius>2.9</forcedMissRadius>
             <burstShotCount>1</burstShotCount>
             <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
-            <warmupTime>3.5</warmupTime>
-            <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
+            <warmupTime>1.5</warmupTime>
+            <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
             <range>19.9</range>
             <soundCast>VWENL_Shot_GrenadeLauncher</soundCast>
             <soundCastTail>GunTail_Medium</soundCastTail>
@@ -167,6 +180,24 @@
             <draw>false</draw>
             <canBeToggled>true</canBeToggled>
             <canFireIndependently>false</canFireIndependently>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+                <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+                <cooldownTime>10</cooldownTime>
+              </li>
+              <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                <AmmoFilter>
+                  <thingDefs>
+                    <li>Neutroamine</li>
+                  </thingDefs>
+                </AmmoFilter>
+                <ItemsPerShot>5</ItemsPerShot>
+                <MaxShots>5</MaxShots>
+                <ReloadSound>Standard_Reload</ReloadSound>
+                <ReloadTimePerShot>1</ReloadTimePerShot>
+              </li>
+            </comps>
           </li>
         </verbProps>
       </li>
@@ -175,11 +206,11 @@
 
   <ThingDef ParentName="FF_BodyPartBionicCombatBase">
     <defName>FF_TearGasArm</defName>
-    <label>tear gas arm</label>
+    <label>tear gas arm (legacy)</label>
     <description>An advanced artifical arm, with a built-in tear gas canister launcher. While providing combat advantage, it is better than a biological arm in almost every way.</description>
     <descriptionHyperlinks><RecipeDef>FF_InstallTearGasArm</RecipeDef></descriptionHyperlinks>
     <costList>
-      <Plasteel>15</Plasteel>
+      <Plasteel>30</Plasteel>
       <ComponentSpacer>4</ComponentSpacer>
       <Neutroamine>25</Neutroamine>
     </costList>
@@ -193,7 +224,7 @@
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>FF_InstallTearGasArm</defName>
-    <label>install tear gas arm</label>
+    <label>install tear gas arm (legacy)</label>
     <description>Install a tear gas arm.</description>
     <descriptionHyperlinks>
       <ThingDef>FF_TearGasArm</ThingDef>

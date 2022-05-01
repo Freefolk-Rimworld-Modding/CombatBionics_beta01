@@ -8,24 +8,7 @@
     <description>An installed wrist flamer.</description>
     <descriptionHyperlinks><ThingDef>FF_FlamerWristImplant</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>FF_FlamerWristImplant</spawnThingOnRemoved>
-    <addedPartProps>
-      <solid>true</solid>
-      <partEfficiency>1.15</partEfficiency>
-      <betterThanNatural>true</betterThanNatural>
-    </addedPartProps>
     <comps>
-      <li Class="Reloading.HediffCompProperties_Reloadable">
-        <compClass>Reloading.HediffComp_Reloadable</compClass>
-        <MaxShots>5</MaxShots>
-        <AmmoFilter>
-          <thingDefs>
-             <li>Chemfuel</li>
-          </thingDefs>
-        </AmmoFilter>
-        <ItemsPerShot>8</ItemsPerShot>
-        <ReloadTimePerShot>1</ReloadTimePerShot>
-        <ReloadSound>ReloadRocket</ReloadSound>
-      </li>
       <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
         <verbs>
           <li>
@@ -34,10 +17,9 @@
             <hasStandardCommand>True</hasStandardCommand>
             <defaultProjectile>VWE_Bullet_HeavyFlamer</defaultProjectile>
             <burstShotCount>1</burstShotCount>
-            <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
             <warmupTime>0.75</warmupTime>
             <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
-            <range>9.9</range>
+            <range>14.9</range>
             <soundCast>InfernoCannon_Fire</soundCast>
             <soundCastTail>GunTail_Light</soundCastTail>
             <onlyManualCast>true</onlyManualCast>
@@ -53,6 +35,24 @@
             <draw>false</draw>
             <canBeToggled>true</canBeToggled>
             <canFireIndependently>false</canFireIndependently>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+                <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+                <cooldownTime>5</cooldownTime>
+              </li>
+              <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                <AmmoFilter>
+                  <thingDefs>
+                    <li>Chemfuel</li>
+                  </thingDefs>
+                </AmmoFilter>
+                <ItemsPerShot>20</ItemsPerShot>
+                <MaxShots>3</MaxShots>
+                <ReloadSound>Standard_Reload</ReloadSound>
+                <ReloadTimePerShot>2</ReloadTimePerShot>
+              </li>
+            </comps>
           </li>
         </verbProps>
       </li>
@@ -67,7 +67,7 @@
     <costList>
       <Plasteel>15</Plasteel>
       <ComponentSpacer>4</ComponentSpacer>
-      <Chemfuel>40</Chemfuel>
+      <Chemfuel>60</Chemfuel>
     </costList>
     <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
     <recipeMaker>
@@ -127,7 +127,7 @@
 
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>FF_FlamerWrist</defName>
-    <label>flamer wrist</label>
+    <label>flamer wrist (legacy)</label>
     <labelNoun>a flamer wrist</labelNoun>
     <description>An installed flamer wrist.</description>
     <descriptionHyperlinks><ThingDef>FF_FlamerWrist</ThingDef></descriptionHyperlinks>
@@ -138,18 +138,6 @@
       <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
     <comps>
-      <li Class="Reloading.HediffCompProperties_Reloadable">
-        <compClass>Reloading.HediffComp_Reloadable</compClass>
-        <MaxShots>5</MaxShots>
-        <AmmoFilter>
-          <thingDefs>
-             <li>Chemfuel</li>
-          </thingDefs>
-        </AmmoFilter>
-        <ItemsPerShot>8</ItemsPerShot>
-        <ReloadTimePerShot>1</ReloadTimePerShot>
-        <ReloadSound>ReloadRocket</ReloadSound>
-      </li>
       <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
         <tools>
           <li>
@@ -170,10 +158,9 @@
             <hasStandardCommand>True</hasStandardCommand>
             <defaultProjectile>VWE_Bullet_HeavyFlamer</defaultProjectile>
             <burstShotCount>1</burstShotCount>
-            <ticksBetweenBurstShots>8</ticksBetweenBurstShots>
             <warmupTime>0.75</warmupTime>
             <ai_AvoidFriendlyFireRadius>3</ai_AvoidFriendlyFireRadius>
-            <range>9.9</range>
+            <range>14.9</range>
             <soundCast>InfernoCannon_Fire</soundCast>
             <soundCastTail>GunTail_Light</soundCastTail>
             <onlyManualCast>true</onlyManualCast>
@@ -185,10 +172,28 @@
         </verbs>
         <verbProps>
           <li>
-            <label>flamer wrist</label>
+            <label>wrist flamer</label>
             <draw>false</draw>
             <canBeToggled>true</canBeToggled>
             <canFireIndependently>false</canFireIndependently>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+                <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+                <cooldownTime>5</cooldownTime>
+              </li>
+              <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                <AmmoFilter>
+                  <thingDefs>
+                    <li>Chemfuel</li>
+                  </thingDefs>
+                </AmmoFilter>
+                <ItemsPerShot>20</ItemsPerShot>
+                <MaxShots>3</MaxShots>
+                <ReloadSound>Standard_Reload</ReloadSound>
+                <ReloadTimePerShot>2</ReloadTimePerShot>
+              </li>
+            </comps>
           </li>
         </verbProps>
       </li>
@@ -197,13 +202,13 @@
 
   <ThingDef ParentName="FF_BodyPartBionicCombatBase">
     <defName>FF_FlamerWrist</defName>
-    <label>flamer wrist</label>
+    <label>flamer wrist (legacy)</label>
     <description>An advanced artifical arm, with a built-in flamethrower. While providing combat advantage, it is better than a biological arm in almost every way.</description>
     <descriptionHyperlinks><RecipeDef>FF_InstallFlamerWrist</RecipeDef></descriptionHyperlinks>
     <costList>
-      <Plasteel>15</Plasteel>
+      <Plasteel>30</Plasteel>
       <ComponentSpacer>4</ComponentSpacer>
-      <Chemfuel>40</Chemfuel>
+      <Chemfuel>60</Chemfuel>
     </costList>
     <statBases>
       <Mass>5</Mass>
@@ -215,7 +220,7 @@
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>FF_InstallFlamerWrist</defName>
-    <label>install flamer wrist</label>
+    <label>install flamer wrist (legacy)</label>
     <description>Install a flamer wrist.</description>
     <descriptionHyperlinks>
       <ThingDef>FF_FlamerWrist</ThingDef>

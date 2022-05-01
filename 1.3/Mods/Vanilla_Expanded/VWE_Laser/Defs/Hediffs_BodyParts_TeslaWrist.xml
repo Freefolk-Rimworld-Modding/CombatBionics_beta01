@@ -3,7 +3,7 @@
 
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>FF_TeslaWrist</defName>
-    <label>tesla wrist</label>
+    <label>tesla wrist (legacy)</label>
     <labelNoun>a tesla wrist</labelNoun>
     <description>An installed tesla wrist.</description>
     <descriptionHyperlinks><ThingDef>FF_TeslaWrist</ThingDef></descriptionHyperlinks>
@@ -60,13 +60,13 @@
 
   <ThingDef ParentName="FF_BodyPartBionicCombatBase">
     <defName>FF_TeslaWrist</defName>
-    <label>tesla wrist</label>
+    <label>tesla wrist (legacy)</label>
     <description>An advanced artifical hand, with a built-in electric weapon. While providing combat advantage, it is better than a biological hand in almost every way.</description>
     <descriptionHyperlinks><RecipeDef>FF_InstallTeslaWrist</RecipeDef></descriptionHyperlinks>
     <costList>
-      <Plasteel>15</Plasteel>
+      <Plasteel>20</Plasteel>
       <ComponentSpacer>4</ComponentSpacer>
-      <ComponentIndustrial>6</ComponentIndustrial>
+      <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
     <thingSetMakerTags><li>RewardStandardLowFreq</li></thingSetMakerTags>
     <statBases>
@@ -79,7 +79,7 @@
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>FF_InstallTeslaWrist</defName>
-    <label>install tesla wrist</label>
+    <label>install tesla wrist (legacy)</label>
     <description>Install a tesla wrist.</description>
     <descriptionHyperlinks>
       <ThingDef>FF_TeslaWrist</ThingDef>

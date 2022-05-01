@@ -9,18 +9,6 @@
     <descriptionHyperlinks><ThingDef>FF_SwarmWristImplant</ThingDef></descriptionHyperlinks>
     <spawnThingOnRemoved>FF_SwarmWristImplant</spawnThingOnRemoved>
     <comps>
-      <li Class="Reloading.HediffCompProperties_Reloadable">
-        <compClass>Reloading.HediffComp_Reloadable</compClass>
-        <MaxShots>8</MaxShots>
-        <AmmoFilter>
-          <thingDefs>
-             <li>Chemfuel</li>
-          </thingDefs>
-        </AmmoFilter>
-        <ItemsPerShot>5</ItemsPerShot>
-        <ReloadTimePerShot>0.25</ReloadTimePerShot>
-        <ReloadSound>Interact_Grenade</ReloadSound>
-      </li>
       <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
         <verbs>
           <li>
@@ -36,7 +24,7 @@
             <range>21.9</range>
             <soundCast>InfernoCannon_Fire</soundCast>
             <soundCastTail>GunTail_Heavy</soundCastTail>
-            <onlyManualCast>true</onlyManualCast>
+            <onlyManualCast>True</onlyManualCast>
             <stopBurstWithoutLos>false</stopBurstWithoutLos>
             <targetParams>
               <canTargetLocations>true</canTargetLocations>
@@ -50,6 +38,25 @@
             <draw>false</draw>
             <canBeToggled>true</canBeToggled>
             <canFireIndependently>false</canFireIndependently>
+            <uniqueTargets>true</uniqueTargets>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+                <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+                <cooldownTime>12</cooldownTime>
+              </li>
+              <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                <AmmoFilter>
+                  <thingDefs>
+                    <li>Chemfuel</li>
+                  </thingDefs>
+                </AmmoFilter>
+                <ItemsPerShot>5</ItemsPerShot>
+                <MaxShots>8</MaxShots>
+                <ReloadSound>Standard_Reload</ReloadSound>
+                <ReloadTimePerShot>1</ReloadTimePerShot>
+              </li>
+            </comps>
           </li>
         </verbProps>
       </li>
@@ -145,7 +152,7 @@
   <DamageDef>
     <defName>FF_SwarmMissile</defName>
     <label>swarm missile</label>
-    <workerClass>DamageWorker_AddInjury</workerClass> <!-- Custom damage worker! -->
+    <workerClass>DamageWorker_AddInjury</workerClass>
     <externalViolence>true</externalViolence>
     <isExplosive>true</isExplosive>
     <deathMessage>{0} has died in an explosion.</deathMessage>
@@ -154,9 +161,8 @@
     <harmAllLayersUntilOutside>false</harmAllLayersUntilOutside>
     <impactSoundType>Blunt</impactSoundType>
     <armorCategory>Blunt</armorCategory>
-    <minDamageToFragment>2</minDamageToFragment>
-    <defaultDamage>9</defaultDamage>
-    <defaultStoppingPower>0.5</defaultStoppingPower> <!-- Increased from 0.5, need testing -->
+    <defaultDamage>6</defaultDamage>
+    <defaultStoppingPower>0.5</defaultStoppingPower>
     <defaultArmorPenetration>0.10</defaultArmorPenetration>
     <buildingDamageFactor>4</buildingDamageFactor>
     <plantDamageFactor>4</plantDamageFactor>
@@ -173,7 +179,7 @@
 
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>FF_SwarmWrist</defName>
-    <label>swarm wrist</label>
+    <label>swarm wrist (legacy)</label>
     <labelNoun>a swarm wrist</labelNoun>
     <description>An installed swarm wrist.</description>
     <descriptionHyperlinks><ThingDef>FF_SwarmWrist</ThingDef></descriptionHyperlinks>
@@ -184,18 +190,6 @@
       <betterThanNatural>true</betterThanNatural>
     </addedPartProps>
     <comps>
-      <li Class="Reloading.HediffCompProperties_Reloadable">
-        <compClass>Reloading.HediffComp_Reloadable</compClass>
-        <MaxShots>8</MaxShots>
-        <AmmoFilter>
-          <thingDefs>
-             <li>Chemfuel</li>
-          </thingDefs>
-        </AmmoFilter>
-        <ItemsPerShot>5</ItemsPerShot>
-        <ReloadTimePerShot>0.25</ReloadTimePerShot>
-        <ReloadSound>Interact_Grenade</ReloadSound>
-      </li>
       <li Class="MVCF.Comps.HediffCompProperties_ExtendedVerbGiver">
         <tools>
           <li>
@@ -212,18 +206,18 @@
         <verbs>
           <li>
             <verbClass>Verb_Shoot</verbClass>
-            <label>swarm wrist</label>
+            <label>whistling birds</label>
             <hasStandardCommand>True</hasStandardCommand>
             <defaultProjectile>Bullet_FF_SwarmRocket</defaultProjectile>
             <forcedMissRadius>4.9</forcedMissRadius>
             <burstShotCount>8</burstShotCount>
-            <ticksBetweenBurstShots>18</ticksBetweenBurstShots>
-            <warmupTime>3</warmupTime>
+            <ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+            <warmupTime>0.5</warmupTime>
             <ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
             <range>21.9</range>
             <soundCast>InfernoCannon_Fire</soundCast>
             <soundCastTail>GunTail_Heavy</soundCastTail>
-            <onlyManualCast>true</onlyManualCast>
+            <onlyManualCast>True</onlyManualCast>
             <stopBurstWithoutLos>false</stopBurstWithoutLos>
             <targetParams>
               <canTargetLocations>true</canTargetLocations>
@@ -233,10 +227,29 @@
         </verbs>
         <verbProps>
           <li>
-            <label>swarm wrist</label>
+            <label>whistling birds</label>
             <draw>false</draw>
             <canBeToggled>true</canBeToggled>
             <canFireIndependently>false</canFireIndependently>
+            <uniqueTargets>true</uniqueTargets>
+            <comps>
+              <li Class="MVCF.VerbComps.VerbCompProperties_Cooldown">
+                <compClass>MVCF.VerbComps.VerbComp_Cooldown</compClass>
+                <cooldownTime>12</cooldownTime>
+              </li>
+              <li Class="MVCF.Reloading.Comps.VerbCompProperties_Reloadable">
+                <compClass>MVCF.Reloading.Comps.VerbComp_Reloadable</compClass>
+                <AmmoFilter>
+                  <thingDefs>
+                    <li>Chemfuel</li>
+                  </thingDefs>
+                </AmmoFilter>
+                <ItemsPerShot>5</ItemsPerShot>
+                <MaxShots>8</MaxShots>
+                <ReloadSound>Standard_Reload</ReloadSound>
+                <ReloadTimePerShot>1</ReloadTimePerShot>
+              </li>
+            </comps>
           </li>
         </verbProps>
       </li>
@@ -245,11 +258,11 @@
 
   <ThingDef ParentName="FF_BodyPartBionicCombatBase">
     <defName>FF_SwarmWrist</defName>
-    <label>swarm wrist</label>
+    <label>swarm wrist (legacy)</label>
     <description>An advanced artifical hand, with a built-in single use missile swarm. While providing combat advantage, it is better than a biological hand in almost every way.</description>
     <descriptionHyperlinks><RecipeDef>FF_InstallSwarmWrist</RecipeDef></descriptionHyperlinks>
     <costList>
-      <Plasteel>15</Plasteel>
+      <Plasteel>30</Plasteel>
       <ComponentSpacer>4</ComponentSpacer>
       <Chemfuel>40</Chemfuel>
     </costList>
@@ -263,7 +276,7 @@
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>FF_InstallSwarmWrist</defName>
-    <label>install swarm wrist</label>
+    <label>install swarm wrist (legacy)</label>
     <description>Install a swarm wrist.</description>
     <descriptionHyperlinks>
       <ThingDef>FF_SwarmWrist</ThingDef>

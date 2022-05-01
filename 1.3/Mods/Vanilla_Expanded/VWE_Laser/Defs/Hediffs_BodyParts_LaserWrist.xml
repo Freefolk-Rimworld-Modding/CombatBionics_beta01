@@ -3,7 +3,7 @@
 
   <HediffDef ParentName="AddedBodyPartBase">
     <defName>FF_LaserWrist</defName>
-    <label>laser wrist</label>
+    <label>laser wrist (legacy)</label>
     <labelNoun>a laser wrist</labelNoun>
     <description>An installed laser wrist.</description>
     <descriptionHyperlinks><ThingDef>FF_LaserWrist</ThingDef></descriptionHyperlinks>
@@ -60,11 +60,11 @@
 
   <ThingDef ParentName="FF_BodyPartBionicCombatBase">
     <defName>FF_LaserWrist</defName>
-    <label>laser wrist</label>
+    <label>laser wrist (legacy)</label>
     <description>An advanced artifical hand, with a built-in laser shooter. While providing combat advantage, it is better than a biological hand in almost every way.</description>
     <descriptionHyperlinks><RecipeDef>FF_InstallLaserWrist</RecipeDef></descriptionHyperlinks>
     <costList>
-      <Plasteel>45</Plasteel>
+      <Plasteel>30</Plasteel>
       <ComponentSpacer>6</ComponentSpacer>
     </costList>
     <statBases>
@@ -77,7 +77,7 @@
 
   <RecipeDef ParentName="SurgeryInstallBodyPartArtificialBase">
     <defName>FF_InstallLaserWrist</defName>
-    <label>install laser wrist</label>
+    <label>install laser wrist (legacy)</label>
     <description>Install a laser wrist.</description>
     <descriptionHyperlinks>
       <ThingDef>FF_LaserWrist</ThingDef>
